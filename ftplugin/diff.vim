@@ -29,7 +29,7 @@ setlocal foldexpr=DiffFoldLevel()
 function! DiffFoldLevel()
     let l:line=getline(v:lnum)
 
-    if l:line =~# '^\From\s*'
+    if l:line =~# '^\-- \s*'
         return '>0'
     elseif l:line =~# '^\(diff\|Index\)'     " file
         return '>1'
